@@ -1,0 +1,75 @@
+erDiagram
+    DIM_TIEMPO_SALIDA {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+        int turno_trabajo
+        string periodo_estacional
+    }
+
+    DIM_TIEMPO_LLEGADA {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+        int turno_trabajo
+        string periodo_estacional
+    }
+
+    DIM_RUTA {
+        int id_ruta PK
+        string codigo_ruta
+        string descripcion_ruta
+        real distancia_total_km
+        int paradas_intermedias
+        real tiempo_estimado_horas
+        string tipo_ruta
+        boolean requiere_permisos_especiales
+        real costo_base_ruta
+    }
+
+    DIM_ESTADO_ENVIO {
+        int id_estado PK
+        string estado_envio
+        string descripcion_estado
+        boolean es_estado_final
+        boolean requiere_accion
+    }
+
+    FACT_DISTRIBUCION {
+        int id_distribucion PK
+        int id_tiempo_salida FK
+        int id_tiempo_llegada FK
+        int id_ruta FK
+        int id_estado_envio FK
+        string nro_guia_remision
+        int cantidad_sacos
+        real cantidad_toneladas
+        real costo_transporte
+        real costo_total_distribucion
+        int dias_transito
+        int retraso_dias
+        boolean entrega_completa
+    }
+
+    FACT_DISTRIBUCION ||--|| DIM_TIEMPO_SALIDA : "sale en"
+    FACT_DISTRIBUCION ||--|| DIM_TIEMPO_LLEGADA : "llega en"
+    FACT_DISTRIBUCION ||--|| DIM_RUTA : "utiliza"
+    FACT_DISTRIBUCION ||--|| DIM_ESTADO_ENVIO : "tiene estado"

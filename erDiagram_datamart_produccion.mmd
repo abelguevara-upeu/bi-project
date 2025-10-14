@@ -1,0 +1,60 @@
+erDiagram
+    DIM_TIEMPO {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+        int turno_trabajo
+        string periodo_estacional
+    }
+
+    DIM_LINEA_PRODUCCION {
+        int id_linea PK
+        string nombre_linea
+        string tipo_linea
+        real capacidad_ton_dia
+        date fecha_instalacion
+        string marca_maquinaria
+        boolean automatizada
+        int numero_operarios_requeridos
+        real costo_operacion_hora
+        string estado_operativo
+    }
+
+    DIM_TURNO {
+        int id_turno PK
+        string nombre_turno
+        string hora_inicio
+        string hora_fin
+        int duracion_horas
+        string supervisor_responsable
+        boolean es_turno_nocturno
+    }
+
+    FACT_PRODUCCION {
+        int id_produccion PK
+        int id_tiempo FK
+        int id_linea_produccion FK
+        int id_turno FK
+        string lote_produccion
+        real cantidad_materia_prima_ton
+        real cantidad_producto_terminado_ton
+        int cantidad_sacos_producidos
+        real rendimiento_porcentaje
+        real tiempo_produccion_horas
+        real costo_total_produccion
+        boolean cumple_estandares_calidad
+        real porcentaje_merma
+    }
+
+    FACT_PRODUCCION ||--|| DIM_TIEMPO : "producido en"
+    FACT_PRODUCCION ||--|| DIM_LINEA_PRODUCCION : "fabricado en"
+    FACT_PRODUCCION ||--|| DIM_TURNO : "durante turno"

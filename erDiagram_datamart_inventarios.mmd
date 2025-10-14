@@ -1,0 +1,60 @@
+erDiagram
+    DIM_TIEMPO {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+        int turno_trabajo
+        string periodo_estacional
+    }
+
+    DIM_PRODUCTO {
+        int id_producto PK
+        string nombre_producto
+        string tipo_harina
+        real peso_kg
+        string categoria
+        int dias_vencimiento
+        boolean requiere_refrigeracion
+    }
+
+    DIM_ALMACEN {
+        int id_almacen PK
+        string nombre_almacen
+        string tipo_almacen
+        string ubicacion
+        real capacidad_maxima_ton
+        real temperatura_promedio
+        boolean tiene_refrigeracion
+        string responsable
+        date fecha_construccion
+        string estado_operativo
+    }
+
+    FACT_INVENTARIO {
+        int id_inventario PK
+        int id_tiempo FK
+        int id_producto FK
+        int id_almacen FK
+        real stock_inicial_ton
+        real entradas_ton
+        real salidas_ton
+        real stock_final_ton
+        real stock_minimo_ton
+        real stock_maximo_ton
+        real valor_unitario
+        real valor_total
+        string estado_stock
+    }
+
+    FACT_INVENTARIO ||--|| DIM_TIEMPO : "registrado en"
+    FACT_INVENTARIO ||--|| DIM_PRODUCTO : "almacena"
+    FACT_INVENTARIO ||--|| DIM_ALMACEN : "ubicado en"

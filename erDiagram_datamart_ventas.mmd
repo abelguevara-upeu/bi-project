@@ -1,0 +1,101 @@
+erDiagram
+    DIM_TIEMPO {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+        int turno_trabajo
+        string periodo_estacional
+    }
+
+    DIM_PRODUCTO {
+        int id_producto PK
+        string nombre_producto
+        string tipo_harina
+        real peso_kg
+        string categoria
+        string subcategoria
+        string marca
+        boolean es_premium
+        string unidad_medida
+    }
+
+    DIM_CLIENTE {
+        int id_cliente PK
+        string nombre_cliente
+        string tipo_cliente
+        string segmento
+        string tamaño_empresa
+        int id_pais
+        string nombre_pais
+        string region
+        date fecha_registro
+        string estado_cliente
+    }
+
+    DIM_GEOGRAFIA {
+        int id_geografia PK
+        string pais
+        string region
+        string continente
+        string zona_comercial
+        string codigo_iso
+        boolean es_mercado_principal
+    }
+
+    DIM_CANAL {
+        int id_canal PK
+        string canal_distribucion
+        string tipo_canal
+        string descripcion
+        real comision_porcentaje
+        boolean es_activo
+    }
+
+    DIM_TRANSPORTE {
+        int id_transporte PK
+        string medio_transporte
+        string tipo_transporte
+        real costo_promedio_km
+        real capacidad_ton
+        boolean es_internacional
+    }
+
+    FACT_VENTAS {
+        int id_venta PK
+        int id_tiempo FK
+        int id_producto FK
+        int id_cliente FK
+        int id_geografia FK
+        int id_canal FK
+        int id_transporte FK
+        string nro_pedido
+        int cantidad_sacos
+        real cantidad_toneladas
+        real precio_por_saco
+        real total_venta
+        real costo_producto
+        real margen_bruto
+        real descuento_aplicado
+        string moneda
+        real tipo_cambio
+        string estado_venta
+        date fecha_entrega
+        int dias_credito
+        real comision_venta
+    }
+
+    FACT_VENTAS ||--|| DIM_TIEMPO : "ocurre en"
+    FACT_VENTAS ||--|| DIM_PRODUCTO : "incluye"
+    FACT_VENTAS ||--|| DIM_CLIENTE : "vendido a"
+    FACT_VENTAS ||--|| DIM_GEOGRAFIA : "enviado a"
+    FACT_VENTAS ||--|| DIM_CANAL : "a través de"
+    FACT_VENTAS ||--|| DIM_TRANSPORTE : "transportado por"
