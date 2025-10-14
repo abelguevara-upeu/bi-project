@@ -1,0 +1,158 @@
+---
+title: "Arquitectura del Proceso de Business Intelligence - Empresa Molinera"
+---
+
+flowchart TD
+    %% Fuentes de Datos (CSV)
+    subgraph FUENTES["📁 FUENTES DE DATOS"]
+        CSV1["📄 DATA_VENTAS_HARINA_FINAL.csv"]
+        CSV2["📄 DATA_INVENTARIO_HARINA_FINAL.csv"]
+        CSV3["📄 DATA_PRODUCCIÓN_HARINA.csv"]
+        CSV4["📄 DATA_DISTRIBUCION_HARINA_FINAL.csv"]
+        CSV5["📄 PRECIOS_POR_PRODUCTO.csv"]
+    end
+
+    %% Proceso ETL 1: CSV to Database
+    subgraph ETL1["🔄 ETL FASE 1: Creación BD Operacional"]
+        SCRIPT1["🐍 create_db_molinera.py"]
+        TRANS1["🔧 Transformaciones:<br/>• Normalización de datos<br/>• Creación de FK/PK<br/>• Validación de datos<br/>• Creación de índices"]
+    end
+
+    %% Data Warehouse Operacional
+    subgraph DW["🏢 DATA WAREHOUSE OPERACIONAL"]
+        DB["🗄️ empresa_molinera.db"]
+        subgraph TABLAS["Tablas Principales"]
+            T1["📋 PAISES (9 registros)"]
+            T2["📋 PRODUCTOS (únicos)"]
+            T3["📋 ALMACENES (3 registros)"]
+            T4["📋 CLIENTES (por país)"]
+            T5["📋 VENTAS (transacciones)"]
+            T6["📋 INVENTARIOS (movimientos)"]
+            T7["📋 PRODUCCION (lotes)"]
+            T8["📋 DISTRIBUCION (envíos)"]
+        end
+    end
+
+    %% Proceso ETL 2: Database to Datamarts
+    subgraph ETL2["🔄 ETL FASE 2: Creación Datamarts"]
+        SCRIPT2["🐍 crear_datamarts.py"]
+        TRANS2["🔧 Transformaciones:<br/>• Esquemas estrella<br/>• Dimensiones<br/>• Tablas de hechos<br/>• Métricas de negocio"]
+    end
+
+    %% Datamarts Especializados
+    subgraph DATAMARTS["⭐ DATAMARTS DIMENSIONALES"]
+
+        subgraph DM1["💰 DATAMART VENTAS"]
+            DM1_DB["📊 datamart_ventas.db"]
+            DM1_DIM["🔹 Dimensiones:<br/>• DIM_TIEMPO<br/>• DIM_PRODUCTO<br/>• DIM_CLIENTE<br/>• DIM_GEOGRAFIA<br/>• DIM_CANAL<br/>• DIM_TRANSPORTE"]
+            DM1_FACT["📈 FACT_VENTAS<br/>Métricas: ingresos, márgenes,<br/>comisiones, descuentos"]
+        end
+
+        subgraph DM2["📦 DATAMART INVENTARIOS"]
+            DM2_DB["📊 datamart_inventarios.db"]
+            DM2_DIM["🔹 Dimensiones:<br/>• DIM_TIEMPO<br/>• DIM_PRODUCTO<br/>• DIM_ALMACEN"]
+            DM2_FACT["📈 FACT_INVENTARIO<br/>Métricas: stock, entradas,<br/>salidas, valores, estados"]
+        end
+
+        subgraph DM3["🚚 DATAMART DISTRIBUCIÓN"]
+            DM3_DB["📊 datamart_distribucion.db"]
+            DM3_DIM["🔹 Dimensiones:<br/>• DIM_TIEMPO_SALIDA<br/>• DIM_TIEMPO_LLEGADA<br/>• DIM_RUTA<br/>• DIM_ESTADO_ENVIO"]
+            DM3_FACT["📈 FACT_DISTRIBUCION<br/>Métricas: costos transporte,<br/>días tránsito, eficiencia"]
+        end
+
+        subgraph DM4["🏭 DATAMART PRODUCCIÓN"]
+            DM4_DB["📊 datamart_produccion.db"]
+            DM4_DIM["🔹 Dimensiones:<br/>• DIM_TIEMPO<br/>• DIM_LINEA_PRODUCCION<br/>• DIM_TURNO"]
+            DM4_FACT["📈 FACT_PRODUCCION<br/>Métricas: eficiencia,<br/>costos, calidad, merma"]
+        end
+    end
+
+    %% Dimensión Común
+    subgraph COMUN["🕒 DIMENSIÓN COMÚN"]
+        DIM_TIEMPO["📅 DIM_TIEMPO<br/>2023-2026<br/>1,461 registros<br/>Jerarquías temporales"]
+    end
+
+    %% Herramientas de BI
+    subgraph BI_TOOLS["📊 HERRAMIENTAS DE BI"]
+        POWERBI["🔷 Power BI"]
+        TABLEAU["🔶 Tableau"]
+        QLIK["🔸 Qlik Sense"]
+        EXCEL["📊 Excel"]
+    end
+
+    %% Análisis de Negocio
+    subgraph ANALISIS["📈 ANÁLISIS DE NEGOCIO"]
+        A1["💹 Análisis de Ventas<br/>• Rentabilidad<br/>• Tendencias<br/>• Segmentación"]
+        A2["📋 Control de Inventarios<br/>• Rotación<br/>• Stock óptimo<br/>• Alertas"]
+        A3["🚛 Optimización Logística<br/>• Rutas eficientes<br/>• Costos transporte<br/>• Tiempos entrega"]
+        A4["⚙️ Eficiencia Productiva<br/>• KPIs producción<br/>• Control calidad<br/>• Costos operativos"]
+    end
+
+    %% Conexiones del flujo
+    CSV1 --> ETL1
+    CSV2 --> ETL1
+    CSV3 --> ETL1
+    CSV4 --> ETL1
+    CSV5 --> ETL1
+
+    ETL1 --> SCRIPT1
+    SCRIPT1 --> TRANS1
+    TRANS1 --> DB
+
+    DB --> T1
+    DB --> T2
+    DB --> T3
+    DB --> T4
+    DB --> T5
+    DB --> T6
+    DB --> T7
+    DB --> T8
+
+    DB --> ETL2
+    ETL2 --> SCRIPT2
+    SCRIPT2 --> TRANS2
+
+    TRANS2 --> DM1_DB
+    TRANS2 --> DM2_DB
+    TRANS2 --> DM3_DB
+    TRANS2 --> DM4_DB
+
+    %% Conexiones de dimensión común
+    DIM_TIEMPO -.-> DM1_DIM
+    DIM_TIEMPO -.-> DM2_DIM
+    DIM_TIEMPO -.-> DM3_DIM
+    DIM_TIEMPO -.-> DM4_DIM
+
+    %% Conexiones internas de datamarts
+    DM1_DIM --> DM1_FACT
+    DM2_DIM --> DM2_FACT
+    DM3_DIM --> DM3_FACT
+    DM4_DIM --> DM4_FACT
+
+    %% Conexiones a herramientas BI
+    DM1_DB --> BI_TOOLS
+    DM2_DB --> BI_TOOLS
+    DM3_DB --> BI_TOOLS
+    DM4_DB --> BI_TOOLS
+
+    %% Conexiones a análisis
+    DM1_FACT --> A1
+    DM2_FACT --> A2
+    DM3_FACT --> A3
+    DM4_FACT --> A4
+
+    %% Estilos
+    classDef csvStyle fill:#e1f5fe,stroke:#0277bd,stroke-width:2px,color:#000
+    classDef etlStyle fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef dbStyle fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef dmStyle fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef biStyle fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    classDef analysisStyle fill:#f1f8e9,stroke:#689f38,stroke-width:2px,color:#000
+
+    %% Aplicar estilos
+    class CSV1,CSV2,CSV3,CSV4,CSV5 csvStyle
+    class SCRIPT1,SCRIPT2,TRANS1,TRANS2 etlStyle
+    class DB,T1,T2,T3,T4,T5,T6,T7,T8 dbStyle
+    class DM1_DB,DM2_DB,DM3_DB,DM4_DB,DM1_DIM,DM2_DIM,DM3_DIM,DM4_DIM,DM1_FACT,DM2_FACT,DM3_FACT,DM4_FACT,DIM_TIEMPO dmStyle
+    class POWERBI,TABLEAU,QLIK,EXCEL biStyle
+    class A1,A2,A3,A4 analysisStyle
