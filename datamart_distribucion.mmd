@@ -1,0 +1,169 @@
+---
+title: "Datamart de Distribución - Empresa Molinera"
+---
+erDiagram
+    %% Dimensiones
+    DIM_TIEMPO {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+    }
+
+    DIM_PRODUCTO {
+        int id_producto PK
+        string nombre_producto
+        string tipo_harina
+        float peso_kg
+        string categoria
+        string subcategoria
+        string marca
+        boolean es_premium
+        string unidad_medida
+        boolean requiere_cuidados_especiales
+    }
+
+    DIM_ALMACEN_ORIGEN {
+        int id_almacen PK
+        string nombre_almacen
+        string tipo_almacen
+        string ubicacion_geografica
+        float capacidad_maxima_ton
+        string region
+        string zona_distribucion
+        boolean es_centro_principal
+        string codigo_postal
+    }
+
+    DIM_ALMACEN_DESTINO {
+        int id_almacen_destino PK
+        string nombre_almacen_destino
+        string tipo_destino
+        string ubicacion_geografica
+        string pais_destino
+        string region_destino
+        float distancia_km_desde_origen
+        boolean es_internacional
+        string zona_comercial
+    }
+
+    DIM_TRANSPORTE {
+        int id_transporte PK
+        string medio_transporte
+        string tipo_vehiculo
+        string empresa_transportista
+        float capacidad_ton
+        float costo_por_km
+        boolean disponible_internacional
+        string tipo_servicio
+        int tiempo_promedio_entrega_dias
+    }
+
+    DIM_RUTA {
+        int id_ruta PK
+        string codigo_ruta
+        string descripcion_ruta
+        float distancia_total_km
+        int paradas_intermedias
+        float tiempo_estimado_horas
+        string tipo_ruta
+        boolean requiere_permisos_especiales
+        float costo_base_ruta
+    }
+
+    DIM_ESTADO_ENVIO {
+        int id_estado PK
+        string estado_envio
+        string descripcion_estado
+        boolean es_estado_final
+        boolean requiere_accion
+        string siguiente_estado_posible
+        int orden_proceso
+    }
+
+    %% Tabla de Hechos Principal
+    FACT_DISTRIBUCION {
+        int id_distribucion PK
+        int id_tiempo_salida FK
+        int id_tiempo_llegada FK
+        int id_producto FK
+        int id_almacen_origen FK
+        int id_almacen_destino FK
+        int id_transporte FK
+        int id_ruta FK
+        int id_estado_envio FK
+        string nro_guia_remision
+        string nro_orden_distribucion
+        int cantidad_sacos
+        float cantidad_toneladas
+        float costo_transporte
+        float costo_combustible
+        float costo_peajes
+        float costo_total_distribucion
+        date fecha_salida
+        date fecha_llegada_programada
+        date fecha_llegada_real
+        int dias_transito
+        int retraso_dias
+        float temperatura_transporte
+        boolean entrega_completa
+        boolean productos_dañados
+        float porcentaje_merma
+        string observaciones
+        float kilometraje_recorrido
+        int numero_paradas
+        string conductor_responsable
+    }
+
+    %% Tabla de Hechos Agregada - Rutas
+    FACT_RENDIMIENTO_RUTAS {
+        int id_rendimiento PK
+        int id_tiempo FK
+        int id_ruta FK
+        int id_transporte FK
+        int total_viajes_mes
+        float total_toneladas_transportadas
+        float total_kilometros_recorridos
+        float costo_promedio_por_km
+        float tiempo_promedio_viaje_horas
+        int entregas_a_tiempo
+        int entregas_con_retraso
+        float porcentaje_puntualidad
+        float porcentaje_merma_promedio
+        float costo_total_mes
+        int incidentes_reportados
+        float eficiencia_combustible
+    }
+
+    %% Relaciones
+    DIM_TIEMPO ||--o{ FACT_DISTRIBUCION : "fecha_salida"
+    DIM_TIEMPO ||--o{ FACT_RENDIMIENTO_RUTAS : "periodo_medicion"
+    DIM_PRODUCTO ||--o{ FACT_DISTRIBUCION : "producto_distribuido"
+    DIM_ALMACEN_ORIGEN ||--o{ FACT_DISTRIBUCION : "punto_salida"
+    DIM_ALMACEN_DESTINO ||--o{ FACT_DISTRIBUCION : "punto_llegada"
+    DIM_TRANSPORTE ||--o{ FACT_DISTRIBUCION : "vehiculo_utilizado"
+    DIM_TRANSPORTE ||--o{ FACT_RENDIMIENTO_RUTAS : "vehiculo_analizado"
+    DIM_RUTA ||--o{ FACT_DISTRIBUCION : "ruta_seguida"
+    DIM_RUTA ||--o{ FACT_RENDIMIENTO_RUTAS : "ruta_evaluada"
+    DIM_ESTADO_ENVIO ||--o{ FACT_DISTRIBUCION : "estado_actual"
+
+    %% Styling
+    classDef factTable fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    classDef dimTable fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef timeTable fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef aggregateTable fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef locationTable fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+
+    class FACT_DISTRIBUCION factTable
+    class FACT_RENDIMIENTO_RUTAS aggregateTable
+    class DIM_PRODUCTO,DIM_TRANSPORTE,DIM_RUTA,DIM_ESTADO_ENVIO dimTable
+    class DIM_ALMACEN_ORIGEN,DIM_ALMACEN_DESTINO locationTable
+    class DIM_TIEMPO timeTable

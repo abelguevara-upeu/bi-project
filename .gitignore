@@ -1,0 +1,12 @@
+# Software generated files
+.DS_Store
+*.pyc
+__pycache__/
+
+# Folder for virtual environments
+venv/
+env/
+.venv/
+.env/
+.idea/
+.vscode/

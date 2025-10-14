@@ -1,0 +1,207 @@
+---
+title: "Datamart de Producción - Empresa Molinera"
+---
+erDiagram
+    %% Dimensiones
+    DIM_TIEMPO {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+        int turno_trabajo
+        string periodo_estacional
+    }
+
+    DIM_PRODUCTO_TERMINADO {
+        int id_producto PK
+        string nombre_producto
+        string tipo_harina
+        float peso_kg
+        string categoria
+        string subcategoria
+        string marca
+        boolean es_premium
+        string proceso_elaboracion
+        int tiempo_produccion_horas
+        string estandares_calidad
+    }
+
+    DIM_MATERIA_PRIMA {
+        int id_materia_prima PK
+        string nombre_materia_prima
+        string tipo_grano
+        string origen_geografico
+        string proveedor_principal
+        float precio_promedio_ton
+        string grado_calidad
+        boolean requiere_procesamiento_especial
+        int tiempo_almacenamiento_max_dias
+    }
+
+    DIM_LINEA_PRODUCCION {
+        int id_linea PK
+        string nombre_linea
+        string tipo_linea
+        float capacidad_ton_dia
+        date fecha_instalacion
+        string marca_maquinaria
+        boolean automatizada
+        int numero_operarios_requeridos
+        float costo_operacion_hora
+        string estado_operativo
+    }
+
+    DIM_TURNO {
+        int id_turno PK
+        string nombre_turno
+        time hora_inicio
+        time hora_fin
+        int duracion_horas
+        string supervisor_responsable
+        boolean es_turno_nocturno
+        float factor_productividad
+        int numero_operarios
+    }
+
+    DIM_CALIDAD {
+        int id_calidad PK
+        string nivel_calidad
+        string descripcion_calidad
+        float porcentaje_min_proteina
+        float porcentaje_max_humedad
+        string certificaciones_requeridas
+        boolean apto_exportacion
+        float precio_premium_porcentaje
+        string pruebas_requeridas
+    }
+
+    DIM_PROCESO {
+        int id_proceso PK
+        string nombre_proceso
+        string tipo_proceso
+        int orden_secuencia
+        float tiempo_promedio_minutos
+        string maquinaria_requerida
+        boolean es_proceso_critico
+        float temperatura_optima
+        string parametros_control
+    }
+
+    %% Tabla de Hechos Principal
+    FACT_PRODUCCION {
+        int id_produccion PK
+        int id_tiempo FK
+        int id_producto_terminado FK
+        int id_materia_prima FK
+        int id_linea_produccion FK
+        int id_turno FK
+        int id_calidad FK
+        int id_proceso FK
+        string lote_produccion
+        float cantidad_materia_prima_ton
+        float cantidad_producto_terminado_ton
+        int cantidad_sacos_producidos
+        float rendimiento_porcentaje
+        float tiempo_produccion_horas
+        float costo_materia_prima
+        float costo_mano_obra
+        float costo_energia
+        float costo_mantenimiento
+        float costo_total_produccion
+        float costo_unitario_saco
+        date fecha_inicio_produccion
+        date fecha_fin_produccion
+        date fecha_vencimiento
+        float temperatura_proceso
+        float humedad_ambiente
+        boolean cumple_estandares_calidad
+        float porcentaje_merma
+        float porcentaje_desperdicio
+        int paradas_no_programadas
+        float tiempo_paradas_horas
+        string observaciones_calidad
+        boolean requiere_reproceso
+        int numero_operarios_trabajando
+        float eficiencia_linea_porcentaje
+    }
+
+    %% Tabla de Hechos Agregada - Rendimiento Diario
+    FACT_RENDIMIENTO_DIARIO {
+        int id_rendimiento PK
+        int id_tiempo FK
+        int id_linea_produccion FK
+        int id_producto_terminado FK
+        float produccion_total_ton
+        int total_sacos_producidos
+        float tiempo_total_operacion_horas
+        float tiempo_paradas_total_horas
+        float eficiencia_promedio_porcentaje
+        float costo_total_dia
+        float costo_promedio_ton
+        int lotes_completados
+        int lotes_rechazados
+        float porcentaje_calidad
+        float consumo_energia_kwh
+        float consumo_materia_prima_ton
+        float rendimiento_promedio_porcentaje
+        int incidentes_seguridad
+        boolean meta_produccion_cumplida
+    }
+
+    %% Tabla de Hechos Agregada - Análisis de Calidad
+    FACT_CALIDAD_LOTES {
+        int id_analisis PK
+        int id_tiempo FK
+        int id_producto_terminado FK
+        int id_calidad FK
+        string lote_analizado
+        float proteina_porcentaje
+        float humedad_porcentaje
+        float cenizas_porcentaje
+        float gluten_porcentaje
+        boolean aprobado_calidad
+        date fecha_analisis
+        string laboratorio_responsable
+        string observaciones_tecnicas
+        boolean requiere_accion_correctiva
+        float puntaje_calidad_total
+    }
+
+    %% Relaciones
+    DIM_TIEMPO ||--o{ FACT_PRODUCCION : "fecha_produccion"
+    DIM_TIEMPO ||--o{ FACT_RENDIMIENTO_DIARIO : "dia_operacion"
+    DIM_TIEMPO ||--o{ FACT_CALIDAD_LOTES : "fecha_control_calidad"
+    DIM_PRODUCTO_TERMINADO ||--o{ FACT_PRODUCCION : "producto_elaborado"
+    DIM_PRODUCTO_TERMINADO ||--o{ FACT_RENDIMIENTO_DIARIO : "producto_dia"
+    DIM_PRODUCTO_TERMINADO ||--o{ FACT_CALIDAD_LOTES : "producto_analizado"
+    DIM_MATERIA_PRIMA ||--o{ FACT_PRODUCCION : "insumo_utilizado"
+    DIM_LINEA_PRODUCCION ||--o{ FACT_PRODUCCION : "linea_utilizada"
+    DIM_LINEA_PRODUCCION ||--o{ FACT_RENDIMIENTO_DIARIO : "linea_evaluada"
+    DIM_TURNO ||--o{ FACT_PRODUCCION : "turno_produccion"
+    DIM_CALIDAD ||--o{ FACT_PRODUCCION : "nivel_calidad_logrado"
+    DIM_CALIDAD ||--o{ FACT_CALIDAD_LOTES : "estandar_evaluado"
+    DIM_PROCESO ||--o{ FACT_PRODUCCION : "proceso_ejecutado"
+
+    %% Styling
+    classDef factTable fill:#ffebee,stroke:#c62828,stroke-width:3px
+    classDef dimTable fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef timeTable fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef aggregateTable fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px
+    classDef qualityTable fill:#f1f8e9,stroke:#689f38,stroke-width:2px
+    classDef processTable fill:#fce4ec,stroke:#e91e63,stroke-width:2px
+
+    class FACT_PRODUCCION factTable
+    class FACT_RENDIMIENTO_DIARIO aggregateTable
+    class FACT_CALIDAD_LOTES qualityTable
+    class DIM_PRODUCTO_TERMINADO,DIM_MATERIA_PRIMA,DIM_LINEA_PRODUCCION,DIM_TURNO dimTable
+    class DIM_CALIDAD qualityTable
+    class DIM_PROCESO processTable
+    class DIM_TIEMPO timeTable

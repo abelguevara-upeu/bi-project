@@ -1,0 +1,114 @@
+---
+title: "Datamart de Ventas - Empresa Molinera"
+---
+erDiagram
+    %% Dimensiones
+    DIM_TIEMPO {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+    }
+
+    DIM_PRODUCTO {
+        int id_producto PK
+        string nombre_producto
+        string tipo_harina
+        float peso_kg
+        string categoria
+        string subcategoria
+        string marca
+        boolean es_premium
+        string unidad_medida
+    }
+
+    DIM_CLIENTE {
+        int id_cliente PK
+        string nombre_cliente
+        string tipo_cliente
+        string segmento
+        string tamaño_empresa
+        int id_pais FK
+        string nombre_pais
+        string region
+        date fecha_registro
+        string estado_cliente
+    }
+
+    DIM_GEOGRAFIA {
+        int id_geografia PK
+        string pais
+        string region
+        string continente
+        string zona_comercial
+        string codigo_iso
+        boolean es_mercado_principal
+    }
+
+    DIM_CANAL {
+        int id_canal PK
+        string canal_distribucion
+        string tipo_canal
+        string descripcion
+        float comision_porcentaje
+        boolean es_activo
+    }
+
+    DIM_TRANSPORTE {
+        int id_transporte PK
+        string medio_transporte
+        string tipo_transporte
+        float costo_promedio_km
+        int capacidad_ton
+        boolean es_internacional
+    }
+
+    %% Tabla de Hechos
+    FACT_VENTAS {
+        int id_venta PK
+        int id_tiempo FK
+        int id_producto FK
+        int id_cliente FK
+        int id_geografia FK
+        int id_canal FK
+        int id_transporte FK
+        string nro_pedido
+        int cantidad_sacos
+        float cantidad_toneladas
+        float precio_por_saco
+        float total_venta
+        float costo_producto
+        float margen_bruto
+        float descuento_aplicado
+        string moneda
+        float tipo_cambio
+        string estado_venta
+        date fecha_entrega
+        int dias_credito
+        float comision_venta
+    }
+
+    %% Relaciones
+    DIM_TIEMPO ||--o{ FACT_VENTAS : "fecha_venta"
+    DIM_PRODUCTO ||--o{ FACT_VENTAS : "producto_vendido"
+    DIM_CLIENTE ||--o{ FACT_VENTAS : "comprador"
+    DIM_GEOGRAFIA ||--o{ FACT_VENTAS : "destino"
+    DIM_CANAL ||--o{ FACT_VENTAS : "canal_utilizado"
+    DIM_TRANSPORTE ||--o{ FACT_VENTAS : "medio_envio"
+
+    %% Styling
+    classDef factTable fill:#e1f5fe,stroke:#0277bd,stroke-width:3px
+    classDef dimTable fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef timeTable fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+
+    class FACT_VENTAS factTable
+    class DIM_PRODUCTO,DIM_CLIENTE,DIM_GEOGRAFIA,DIM_CANAL,DIM_TRANSPORTE dimTable
+    class DIM_TIEMPO timeTable

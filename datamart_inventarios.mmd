@@ -1,0 +1,133 @@
+---
+title: "Datamart de Inventarios - Empresa Molinera"
+---
+erDiagram
+    %% Dimensiones
+    DIM_TIEMPO {
+        int id_tiempo PK
+        date fecha_completa
+        int año
+        int mes
+        int dia
+        int trimestre
+        string nombre_mes
+        string nombre_dia_semana
+        int numero_semana
+        string periodo_fiscal
+        boolean es_fin_semana
+        boolean es_feriado
+    }
+
+    DIM_PRODUCTO {
+        int id_producto PK
+        string nombre_producto
+        string tipo_harina
+        float peso_kg
+        string categoria
+        string subcategoria
+        string marca
+        boolean es_premium
+        string unidad_medida
+        int dias_vencimiento
+        boolean requiere_refrigeracion
+    }
+
+    DIM_ALMACEN {
+        int id_almacen PK
+        string nombre_almacen
+        string tipo_almacen
+        string ubicacion
+        float capacidad_maxima_ton
+        float temperatura_promedio
+        boolean tiene_refrigeracion
+        string responsable
+        date fecha_construccion
+        string estado_operativo
+    }
+
+    DIM_PROVEEDOR {
+        int id_proveedor PK
+        string nombre_proveedor
+        string tipo_proveedor
+        string categoria_material
+        string pais_origen
+        float calificacion
+        boolean es_certificado
+        date fecha_registro
+    }
+
+    DIM_ESTADO_STOCK {
+        int id_estado PK
+        string estado_stock
+        string descripcion
+        string nivel_criticidad
+        boolean requiere_accion
+        int dias_limite
+        string accion_sugerida
+    }
+
+    %% Tabla de Hechos
+    FACT_INVENTARIO {
+        int id_inventario PK
+        int id_tiempo FK
+        int id_producto FK
+        int id_almacen FK
+        int id_proveedor FK
+        int id_estado_stock FK
+        float stock_inicial_ton
+        float entradas_ton
+        float salidas_ton
+        float stock_final_ton
+        float stock_minimo_ton
+        float stock_maximo_ton
+        float valor_unitario
+        float valor_total
+        int cantidad_lotes
+        date fecha_vencimiento_proximo
+        int dias_rotacion
+        float costo_almacenamiento
+        float merma_ton
+        float porcentaje_ocupacion
+        int movimientos_periodo
+        string tipo_movimiento
+        float temperatura_almacen
+        boolean stock_critico
+    }
+
+    %% Tabla de Hechos Agregada - Snapshot Mensual
+    FACT_INVENTARIO_MENSUAL {
+        int id_snapshot PK
+        int id_tiempo FK
+        int id_producto FK
+        int id_almacen FK
+        float stock_promedio_mensual
+        float rotacion_mensual
+        float valor_promedio_mensual
+        int total_movimientos
+        float merma_acumulada
+        float costo_almacenamiento_mensual
+        float dias_sin_stock
+        boolean hubo_faltante
+        boolean hubo_exceso
+    }
+
+    %% Relaciones
+    DIM_TIEMPO ||--o{ FACT_INVENTARIO : "fecha_registro"
+    DIM_TIEMPO ||--o{ FACT_INVENTARIO_MENSUAL : "mes_snapshot"
+    DIM_PRODUCTO ||--o{ FACT_INVENTARIO : "producto_almacenado"
+    DIM_PRODUCTO ||--o{ FACT_INVENTARIO_MENSUAL : "producto_mensual"
+    DIM_ALMACEN ||--o{ FACT_INVENTARIO : "ubicacion_stock"
+    DIM_ALMACEN ||--o{ FACT_INVENTARIO_MENSUAL : "ubicacion_mensual"
+    DIM_PROVEEDOR ||--o{ FACT_INVENTARIO : "origen_material"
+    DIM_ESTADO_STOCK ||--o{ FACT_INVENTARIO : "estado_actual"
+
+    %% Styling
+    classDef factTable fill:#e8f5e8,stroke:#2e7d32,stroke-width:3px
+    classDef dimTable fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef timeTable fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef aggregateTable fill:#fff8e1,stroke:#f57c00,stroke-width:2px
+
+    class FACT_INVENTARIO factTable
+    class FACT_INVENTARIO_MENSUAL aggregateTable
+    class DIM_PRODUCTO,DIM_ALMACEN,DIM_PROVEEDOR,DIM_ESTADO_STOCK dimTable
+    class DIM_TIEMPO timeTable

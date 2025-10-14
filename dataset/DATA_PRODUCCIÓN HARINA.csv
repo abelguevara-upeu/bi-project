@@ -1,0 +1,283 @@
+﻿Lote_Producción,Fecha_Producción,Producto,Cantidad_Producida_kg,Materia_Prima_Usada_kg,Turno,Máquina,Operarios,Tiempo_Producción_horas,Costo_Producción_Soles,Merma_kg,Estado_Lote,Rendimiento_%,Línea_Producto
+LOTE2024-0001,2024-01-01,Harina panadera especial Don Angelo (50 kg),2990,3617,Tarde,Molino 1,4,8.1,13358.01,188,Rechazado,82.67,Panadera
+LOTE2024-0002,2024-01-02,Harina panadera especial Don Angelo (50 kg),3858,4293,Mañana,Molino 2,9,3.9,12002.46,109,Completado,89.87,Panadera
+LOTE2024-0003,2024-01-03,Harina panadera integral (25 kg),964,1030,Noche,Molino 1,10,8.8,10782.98,48,Completado,93.59,Integral
+LOTE2024-0004,2024-01-04,Harina integral (25 kg),3730,2139,Mañana,Molino 1,5,7.7,4949.2,182,Completado,174.38,Integral
+LOTE2024-0005,2024-01-05,Harina panadera especial Doña Angélica (50 kg),3584,5061,Tarde,Molino 3,7,8.1,2563.26,62,En proceso,70.82,Panadera
+LOTE2024-0006,2024-01-06,Harina pastelera premium (50 kg),4039,3735,Tarde,Molino 3,5,9.3,5049.77,196,Completado,108.14,Pastelera
+LOTE2024-0007,2024-01-07,Harina panadera integral (25 kg),4122,3766,Noche,Molino 3,11,4.4,6044.04,34,En proceso,109.45,Integral
+LOTE2024-0008,2024-01-08,Harina integral (25 kg),1878,1542,Mañana,Molino 3,7,2.9,8260.99,138,En proceso,121.79,Integral
+LOTE2024-0009,2024-01-09,Harina galletera especial (50 kg),2043,3658,Tarde,Molino 1,10,2.8,7609.02,131,Completado,55.85,Galletera
+LOTE2024-0010,2024-01-10,Harina integral (25 kg),3166,3909,Mañana,Molino 2,6,2.9,5965.7,71,En proceso,80.99,Integral
+LOTE2024-0011,2024-01-11,Harina pastelera premium (50 kg),514,1464,Tarde,Molino 3,3,5.2,10486.58,50,Completado,35.11,Pastelera
+LOTE2024-0012,2024-01-12,Harina galletera especial (50 kg),1561,3913,Noche,Molino 1,6,8.3,4989.69,100,Completado,39.89,Galletera
+LOTE2024-0013,2024-01-13,Harina galletera especial (50 kg),3074,799,Mañana,Molino 2,9,7.1,12783.68,191,Completado,384.73,Galletera
+LOTE2024-0014,2024-01-14,Harina pastelera premium (50 kg),1392,3199,Noche,Molino 3,10,9.1,13212.76,117,Completado,43.51,Pastelera
+LOTE2024-0015,2024-01-15,Harina panadera especial Doña Angélica (50 kg),861,2535,Noche,Molino 2,4,7.5,12925.47,77,Completado,33.96,Panadera
+LOTE2024-0016,2024-01-16,Harina panadera especial Doña Angélica (10 kg),1605,963,Tarde,Molino 3,6,8.1,3278.42,172,En proceso,166.67,Panadera
+LOTE2024-0017,2024-01-17,Harina galletera especial (50 kg),2770,4672,Noche,Molino 1,7,7.7,12302.6,65,Completado,59.29,Galletera
+LOTE2024-0018,2024-01-18,Harina galletera especial (50 kg),1927,5497,Noche,Molino 2,9,7.9,11942.2,156,Rechazado,35.06,Galletera
+LOTE2024-0019,2024-01-19,Harina panadera especial Doña Angélica (10 kg),2990,1494,Mañana,Molino 3,3,6.5,8883.41,101,Completado,200.13,Panadera
+LOTE2024-0020,2024-01-20,Harina integral (25 kg),3578,2269,Mañana,Molino 1,5,9.7,10296.19,108,En proceso,157.69,Integral
+LOTE2024-0021,2024-01-21,Harina panadera premium (50 kg),4440,2376,Noche,Molino 1,9,4.4,13181.02,133,Completado,186.87,Premium
+LOTE2024-0022,2024-01-22,Harina panadera especial Doña Angélica (50 kg),2510,4526,Tarde,Molino 2,6,7.4,2651.6,11,Completado,55.46,Panadera
+LOTE2024-0023,2024-01-23,Harina panadera especial Don Angelo (50 kg),4155,1225,Mañana,Molino 2,10,3.8,7091.47,143,Completado,339.18,Panadera
+LOTE2024-0024,2024-01-24,Harina panadera especial Doña Angélica (10 kg),1345,3002,Noche,Molino 3,9,5.2,5395.15,173,Completado,44.8,Panadera
+LOTE2024-0025,2024-01-25,Harina panadera premium (50 kg),2789,2548,Mañana,Molino 3,3,2.5,6939.19,1,Completado,109.46,Premium
+LOTE2024-0026,2024-01-26,Harina panadera especial Don Angelo (50 kg),4418,5209,Tarde,Molino 2,11,4.5,2685.15,39,En proceso,84.81,Panadera
+LOTE2024-0027,2024-01-27,Harina panadera especial Doña Angélica (10 kg),4437,2929,Tarde,Molino 2,4,2.4,10920.75,4,Completado,151.49,Panadera
+LOTE2024-0028,2024-01-28,Harina panetonera especial (50 kg),3700,2435,Mañana,Molino 2,6,2.6,14228.81,174,En proceso,151.95,Panetonera
+LOTE2024-0029,2024-01-29,Harina galletera especial (50 kg),1628,4713,Mañana,Molino 2,9,5.7,6005.49,147,Completado,34.54,Galletera
+LOTE2024-0030,2024-01-30,Harina panadera premium (50 kg),2162,4025,Noche,Molino 1,7,4.8,13782.04,190,En proceso,53.71,Premium
+LOTE2024-0031,2024-01-31,Harina pastelera premium (50 kg),3154,3701,Mañana,Molino 3,8,3.8,4133.23,11,Completado,85.22,Pastelera
+LOTE2024-0032,2024-02-01,Harina panadera especial Doña Angélica (50 kg),2713,622,Noche,Molino 3,4,4.5,3906.23,143,En proceso,436.17,Panadera
+LOTE2024-0033,2024-02-02,Harina panadera especial Doña Angélica (10 kg),2294,3719,Noche,Molino 3,11,9.5,9084.92,29,Completado,61.68,Panadera
+LOTE2024-0034,2024-02-03,Harina panadera integral (25 kg),1748,5134,Mañana,Molino 3,8,7.8,5655.5,19,Completado,34.05,Integral
+LOTE2024-0035,2024-02-04,Harina integral (25 kg),3534,4907,Tarde,Molino 3,9,8.1,9225.09,84,Completado,72.02,Integral
+LOTE2024-0036,2024-02-05,Harina panadera especial GN (50 kg),4962,4165,Noche,Molino 1,5,5.1,7245.66,69,Completado,119.14,Panadera
+LOTE2024-0037,2024-02-06,Harina panadera integral (25 kg),3810,1105,Noche,Molino 1,7,7.2,13720.9,136,Completado,344.8,Integral
+LOTE2024-0038,2024-02-07,Harina panadera especial Don Angelo (50 kg),1172,622,Mañana,Molino 2,9,7.2,3773.79,130,Completado,188.42,Panadera
+LOTE2024-0039,2024-02-08,Harina integral (25 kg),4550,3199,Mañana,Molino 3,11,5.5,7057.54,147,Completado,142.23,Integral
+LOTE2024-0040,2024-02-09,Harina panetonera especial (50 kg),3499,3223,Tarde,Molino 3,4,7.5,12044.36,61,En proceso,108.56,Panetonera
+LOTE2024-0041,2024-02-10,Harina panadera especial Doña Angélica (50 kg),2925,671,Mañana,Molino 1,10,4.5,4037.35,36,En proceso,435.92,Panadera
+LOTE2024-0042,2024-02-11,Harina panadera especial GN (50 kg),1812,4069,Noche,Molino 3,7,6.0,9102.49,126,En proceso,44.53,Panadera
+LOTE2024-0043,2024-02-12,Harina galletera especial (50 kg),3986,4051,Mañana,Molino 2,5,5.7,11506.55,184,Completado,98.4,Galletera
+LOTE2024-0044,2024-02-13,Harina panadera especial Don Angelo (50 kg),2259,5166,Noche,Molino 3,3,9.6,8795.08,144,Completado,43.73,Panadera
+LOTE2024-0045,2024-02-14,Harina panadera integral (25 kg),2371,2001,Mañana,Molino 3,3,9.9,13739.17,121,Completado,118.49,Integral
+LOTE2024-0046,2024-02-15,Harina panadera especial Don Angelo (50 kg),3678,603,Mañana,Molino 3,6,2.1,7768.84,14,Completado,609.95,Panadera
+LOTE2024-0047,2024-02-16,Harina panadera especial Doña Angélica (10 kg),2255,2674,Mañana,Molino 2,7,7.0,5249.94,18,Completado,84.33,Panadera
+LOTE2024-0048,2024-02-17,Harina panadera especial Doña Angélica (10 kg),2659,3686,Mañana,Molino 2,7,5.6,6037.68,177,En proceso,72.14,Panadera
+LOTE2024-0049,2024-02-18,Harina panadera integral (25 kg),2057,5019,Tarde,Molino 1,5,2.1,12453.69,22,Completado,40.98,Integral
+LOTE2024-0050,2024-02-19,Harina panadera especial Doña Angélica (50 kg),4754,2875,Noche,Molino 3,4,6.9,12858.38,87,Rechazado,165.36,Panadera
+LOTE2024-0051,2024-02-20,Harina galletera especial (50 kg),3247,2416,Tarde,Molino 1,11,4.6,11368.16,23,En proceso,134.4,Galletera
+LOTE2024-0052,2024-02-21,Harina panadera integral (25 kg),4666,4435,Mañana,Molino 2,5,7.6,3771.94,26,Completado,105.21,Integral
+LOTE2024-0053,2024-02-22,Harina panadera especial Doña Angélica (10 kg),2260,670,Tarde,Molino 2,9,7.3,8423.3,22,En proceso,337.31,Panadera
+LOTE2024-0054,2024-02-23,Harina panadera premium (50 kg),3963,1339,Mañana,Molino 3,7,3.9,11997.42,75,Completado,295.97,Premium
+LOTE2024-0055,2024-02-24,Harina panadera integral (25 kg),3761,2031,Noche,Molino 1,7,3.1,3295.54,138,En proceso,185.18,Integral
+LOTE2024-0056,2024-02-25,Harina panadera premium (50 kg),4844,2759,Noche,Molino 2,9,4.0,8187.6,71,Completado,175.57,Premium
+LOTE2024-0057,2024-02-26,Harina integral (25 kg),3795,1792,Tarde,Molino 2,10,3.0,13449.48,23,Completado,211.77,Integral
+LOTE2024-0058,2024-02-27,Harina panadera especial GN (50 kg),3893,1092,Tarde,Molino 1,3,6.7,3641.93,104,Completado,356.5,Panadera
+LOTE2024-0059,2024-02-28,Harina panadera premium (50 kg),516,3958,Noche,Molino 1,10,7.0,8404.94,9,Completado,13.04,Premium
+LOTE2024-0060,2024-02-29,Harina pastelera premium (50 kg),3445,3052,Mañana,Molino 2,5,2.3,4115.93,74,Completado,112.88,Pastelera
+LOTE2024-0061,2024-03-01,Harina panadera especial Don Angelo (50 kg),2841,2722,Mañana,Molino 3,9,7.5,13203.52,32,Completado,104.37,Panadera
+LOTE2024-0062,2024-03-02,Harina panadera especial Doña Angélica (10 kg),4339,1061,Noche,Molino 3,5,8.9,4208.97,122,Completado,408.95,Panadera
+LOTE2024-0063,2024-03-03,Harina panetonera especial (50 kg),691,4965,Tarde,Molino 3,4,9.8,2817.71,92,Completado,13.92,Panetonera
+LOTE2024-0064,2024-03-04,Harina integral (25 kg),3436,5033,Mañana,Molino 3,5,4.1,4620.74,140,Completado,68.27,Integral
+LOTE2024-0065,2024-03-05,Harina panadera especial Don Angelo (50 kg),3976,2335,Mañana,Molino 1,9,8.0,8967.38,27,Completado,170.28,Panadera
+LOTE2024-0066,2024-03-06,Harina integral (25 kg),1735,3184,Noche,Molino 2,4,6.2,13450.91,196,Rechazado,54.49,Integral
+LOTE2024-0067,2024-03-07,Harina integral (25 kg),613,4665,Tarde,Molino 2,11,4.0,3343.93,16,Completado,13.14,Integral
+LOTE2024-0068,2024-03-08,Harina panadera especial Doña Angélica (50 kg),2946,4803,Mañana,Molino 3,3,2.3,14956.73,163,Completado,61.34,Panadera
+LOTE2024-0069,2024-03-09,Harina panadera especial GN (50 kg),589,617,Tarde,Molino 2,4,4.3,14447.25,147,Completado,95.46,Panadera
+LOTE2024-0070,2024-03-10,Harina pastelera premium (50 kg),3125,4537,Tarde,Molino 1,8,5.1,3324.35,195,En proceso,68.88,Pastelera
+LOTE2024-0071,2024-03-11,Harina galletera especial (50 kg),4528,2305,Tarde,Molino 2,7,9.6,13850.53,155,Completado,196.44,Galletera
+LOTE2024-0072,2024-03-12,Harina panetonera especial (50 kg),3592,2458,Mañana,Molino 2,9,4.3,14840.66,117,Completado,146.14,Panetonera
+LOTE2024-0073,2024-03-13,Harina integral (25 kg),4563,1763,Tarde,Molino 2,6,10.0,14402.57,181,En proceso,258.82,Integral
+LOTE2024-0074,2024-03-14,Harina panadera integral (25 kg),3295,2972,Mañana,Molino 3,11,9.3,7033.03,189,Completado,110.87,Integral
+LOTE2024-0075,2024-03-15,Harina panadera especial Doña Angélica (50 kg),3099,2730,Noche,Molino 3,10,5.2,9721.38,15,Completado,113.52,Panadera
+LOTE2024-0076,2024-03-16,Harina panadera especial Doña Angélica (50 kg),781,872,Mañana,Molino 2,5,3.5,3377.58,52,Completado,89.56,Panadera
+LOTE2024-0077,2024-03-17,Harina panadera especial GN (50 kg),1187,4866,Mañana,Molino 1,3,8.0,10909.48,29,Completado,24.39,Panadera
+LOTE2024-0078,2024-03-18,Harina pastelera premium (50 kg),2422,3949,Noche,Molino 2,4,8.1,4806.78,31,Completado,61.33,Pastelera
+LOTE2024-0079,2024-03-19,Harina panadera premium (50 kg),2388,5399,Mañana,Molino 1,7,3.6,3900.78,173,Rechazado,44.23,Premium
+LOTE2024-0080,2024-03-20,Harina pastelera premium (50 kg),1757,4065,Mañana,Molino 1,3,4.3,5769.5,153,En proceso,43.22,Pastelera
+LOTE2024-0081,2024-03-21,Harina panadera especial Don Angelo (50 kg),1600,3008,Noche,Molino 1,9,8.6,7390.13,130,Completado,53.19,Panadera
+LOTE2024-0082,2024-03-22,Harina panadera especial Doña Angélica (50 kg),3417,4317,Noche,Molino 1,11,7.5,6415.68,97,Completado,79.15,Panadera
+LOTE2024-0083,2024-03-23,Harina panadera especial Doña Angélica (50 kg),3251,2979,Mañana,Molino 3,11,6.0,9633.02,9,Completado,109.13,Panadera
+LOTE2024-0084,2024-03-24,Harina panadera especial Doña Angélica (50 kg),1721,2070,Mañana,Molino 2,10,3.4,2877.23,164,Completado,83.14,Panadera
+LOTE2024-0085,2024-03-25,Harina panetonera especial (50 kg),1974,4381,Mañana,Molino 1,3,9.7,5378.7,80,En proceso,45.06,Panetonera
+LOTE2024-0086,2024-03-26,Harina panadera integral (25 kg),3278,1090,Noche,Molino 1,4,8.1,7261.35,171,Completado,300.73,Integral
+LOTE2024-0087,2024-03-27,Harina pastelera premium (50 kg),731,4617,Mañana,Molino 2,8,2.5,9436.57,93,Rechazado,15.83,Pastelera
+LOTE2024-0088,2024-03-28,Harina panadera premium (50 kg),1925,3867,Mañana,Molino 1,8,5.4,7722.01,27,En proceso,49.78,Premium
+LOTE2024-0089,2024-03-29,Harina panadera integral (25 kg),1415,2544,Tarde,Molino 3,5,2.9,7864.13,86,En proceso,55.62,Integral
+LOTE2024-0090,2024-03-30,Harina panadera especial Doña Angélica (50 kg),3773,1656,Tarde,Molino 1,4,8.2,7749.12,140,Completado,227.84,Panadera
+LOTE2024-0091,2024-03-31,Harina pastelera premium (50 kg),3338,1360,Mañana,Molino 3,7,7.9,12600.99,106,Completado,245.44,Pastelera
+LOTE2024-0092,2024-04-01,Harina panadera integral (25 kg),1826,2214,Noche,Molino 3,9,8.5,4545.49,145,En proceso,82.48,Integral
+LOTE2024-0093,2024-04-02,Harina panadera integral (25 kg),3621,2792,Noche,Molino 1,10,2.7,13659.08,91,Completado,129.69,Integral
+LOTE2024-0094,2024-04-03,Harina panadera integral (25 kg),3057,3089,Mañana,Molino 2,4,3.0,6449.32,65,Completado,98.96,Integral
+LOTE2024-0095,2024-04-04,Harina integral (25 kg),2967,3818,Noche,Molino 3,9,5.0,13889.84,68,Rechazado,77.71,Integral
+LOTE2024-0096,2024-04-05,Harina panadera especial Doña Angélica (50 kg),4507,1993,Mañana,Molino 1,6,5.2,3855.75,175,En proceso,226.14,Panadera
+LOTE2024-0097,2024-04-06,Harina panadera especial Doña Angélica (10 kg),1422,5034,Mañana,Molino 2,9,8.0,12404.9,17,Completado,28.25,Panadera
+LOTE2024-0098,2024-04-07,Harina panadera especial Doña Angélica (50 kg),2895,3243,Noche,Molino 3,3,7.2,2540.52,171,En proceso,89.27,Panadera
+LOTE2024-0099,2024-04-08,Harina integral (25 kg),3806,4440,Mañana,Molino 1,10,7.7,14050.47,36,Completado,85.72,Integral
+LOTE2024-0100,2024-04-09,Harina galletera especial (50 kg),3643,2279,Noche,Molino 1,9,8.1,14610.12,122,Completado,159.85,Galletera
+LOTE2024-0101,2024-04-10,Harina panadera especial GN (50 kg),4701,2287,Tarde,Molino 1,9,8.1,2660.28,58,Completado,205.55,Panadera
+LOTE2024-0102,2024-04-11,Harina panetonera especial (50 kg),4165,2839,Mañana,Molino 3,3,3.0,12437.07,107,En proceso,146.71,Panetonera
+LOTE2024-0103,2024-04-12,Harina panadera integral (25 kg),1294,2577,Tarde,Molino 1,6,6.1,3950.89,118,Completado,50.21,Integral
+LOTE2024-0104,2024-04-13,Harina panetonera especial (50 kg),4463,3895,Mañana,Molino 1,8,6.9,10774.44,48,Completado,114.58,Panetonera
+LOTE2024-0105,2024-04-14,Harina pastelera premium (50 kg),795,4367,Noche,Molino 2,5,4.8,13837.67,57,Completado,18.2,Pastelera
+LOTE2024-0106,2024-04-15,Harina integral (25 kg),4392,1382,Tarde,Molino 3,11,6.9,13794.63,97,En proceso,317.8,Integral
+LOTE2024-0107,2024-04-16,Harina galletera especial (50 kg),1219,2504,Tarde,Molino 1,3,3.9,4774.59,10,Completado,48.68,Galletera
+LOTE2024-0108,2024-04-17,Harina panadera especial Doña Angélica (50 kg),4891,2019,Tarde,Molino 3,6,9.4,3393.71,162,En proceso,242.25,Panadera
+LOTE2024-0109,2024-04-18,Harina integral (25 kg),2674,3377,Tarde,Molino 1,11,6.4,10485.5,28,Completado,79.18,Integral
+LOTE2024-0110,2024-04-19,Harina panadera especial Doña Angélica (50 kg),4860,4706,Noche,Molino 1,9,9.9,10747.94,119,Completado,103.27,Panadera
+LOTE2024-0111,2024-04-20,Harina panadera especial Doña Angélica (10 kg),2546,3603,Mañana,Molino 2,10,9.0,6200.39,191,En proceso,70.66,Panadera
+LOTE2024-0112,2024-04-21,Harina panadera premium (50 kg),3268,4471,Noche,Molino 1,11,4.6,14828.21,192,Completado,73.09,Premium
+LOTE2024-0113,2024-04-22,Harina panadera integral (25 kg),1782,4441,Tarde,Molino 1,7,2.3,4062.42,60,Completado,40.13,Integral
+LOTE2024-0114,2024-04-23,Harina integral (25 kg),3371,4065,Mañana,Molino 2,6,9.7,4494.87,100,Rechazado,82.93,Integral
+LOTE2024-0115,2024-04-24,Harina panadera especial Doña Angélica (10 kg),680,2771,Tarde,Molino 1,9,5.4,7789.83,179,Completado,24.54,Panadera
+LOTE2024-0116,2024-04-25,Harina panadera especial Doña Angélica (50 kg),3319,1797,Tarde,Molino 1,8,9.4,9615.98,101,Completado,184.7,Panadera
+LOTE2024-0117,2024-04-26,Harina panadera especial Doña Angélica (50 kg),3867,1741,Mañana,Molino 2,6,8.5,13008.63,68,Completado,222.11,Panadera
+LOTE2024-0118,2024-04-27,Harina panadera premium (50 kg),4395,5138,Tarde,Molino 1,4,7.0,14213.53,110,Completado,85.54,Premium
+LOTE2024-0119,2024-04-28,Harina panadera integral (25 kg),3380,4981,Tarde,Molino 2,11,4.7,2242.67,87,Completado,67.86,Integral
+LOTE2024-0120,2024-04-29,Harina panetonera especial (50 kg),4795,2316,Noche,Molino 3,6,8.2,13651.37,20,En proceso,207.04,Panetonera
+LOTE2024-0121,2024-04-30,Harina panadera integral (25 kg),2572,1388,Tarde,Molino 2,9,6.2,6370.18,192,Completado,185.3,Integral
+LOTE2024-0122,2024-05-01,Harina panadera especial Doña Angélica (10 kg),2878,3903,Tarde,Molino 2,5,6.7,3450.17,151,Completado,73.74,Panadera
+LOTE2024-0123,2024-05-02,Harina panadera especial Doña Angélica (10 kg),532,2087,Noche,Molino 1,7,5.4,6238.87,83,Rechazado,25.49,Panadera
+LOTE2024-0124,2024-05-03,Harina panadera premium (50 kg),4530,4040,Tarde,Molino 3,10,2.2,13632.66,63,Completado,112.13,Premium
+LOTE2024-0125,2024-05-04,Harina galletera especial (50 kg),1008,1790,Noche,Molino 1,6,4.7,6341.04,184,Completado,56.31,Galletera
+LOTE2024-0126,2024-05-05,Harina galletera especial (50 kg),934,3188,Noche,Molino 1,8,4.1,6370.79,79,Completado,29.3,Galletera
+LOTE2024-0127,2024-05-06,Harina pastelera premium (50 kg),2147,4037,Noche,Molino 1,7,3.6,9964.43,89,Completado,53.18,Pastelera
+LOTE2024-0128,2024-05-07,Harina panetonera especial (50 kg),2727,1167,Mañana,Molino 1,3,6.4,10735.28,5,Completado,233.68,Panetonera
+LOTE2024-0129,2024-05-08,Harina panetonera especial (50 kg),2983,2823,Tarde,Molino 1,11,3.4,8808.87,121,Completado,105.67,Panetonera
+LOTE2024-0130,2024-05-09,Harina panadera especial Doña Angélica (10 kg),2149,1911,Noche,Molino 3,3,3.7,14830.85,18,Rechazado,112.45,Panadera
+LOTE2024-0131,2024-05-10,Harina panetonera especial (50 kg),4156,4497,Noche,Molino 2,5,3.9,14483.81,67,Completado,92.42,Panetonera
+LOTE2024-0132,2024-05-11,Harina panadera integral (25 kg),3572,1957,Noche,Molino 3,4,5.8,12442.47,132,Completado,182.52,Integral
+LOTE2024-0133,2024-05-12,Harina integral (25 kg),4821,1948,Mañana,Molino 2,8,9.8,12039.62,106,Completado,247.48,Integral
+LOTE2024-0134,2024-05-13,Harina panadera integral (25 kg),4360,627,Tarde,Molino 2,8,6.1,3923.95,153,Completado,695.37,Integral
+LOTE2024-0135,2024-05-14,Harina panetonera especial (50 kg),3595,3487,Tarde,Molino 3,8,4.6,3187.04,103,Completado,103.1,Panetonera
+LOTE2024-0136,2024-05-15,Harina panadera premium (50 kg),3078,4423,Tarde,Molino 1,6,6.3,14601.79,94,Completado,69.59,Premium
+LOTE2024-0137,2024-05-16,Harina pastelera premium (50 kg),3632,1080,Noche,Molino 3,8,7.0,3015.06,17,Completado,336.3,Pastelera
+LOTE2024-0138,2024-05-17,Harina integral (25 kg),2659,5476,Tarde,Molino 1,7,7.0,12476.67,8,Completado,48.56,Integral
+LOTE2024-0139,2024-05-18,Harina panadera premium (50 kg),943,5163,Noche,Molino 1,5,7.8,2618.19,161,Completado,18.26,Premium
+LOTE2024-0140,2024-05-19,Harina integral (25 kg),2701,1897,Tarde,Molino 2,5,5.7,4321.21,158,Completado,142.38,Integral
+LOTE2024-0141,2024-05-20,Harina panadera premium (50 kg),626,3594,Tarde,Molino 3,8,9.9,7436.45,166,Completado,17.42,Premium
+LOTE2024-0142,2024-05-21,Harina pastelera premium (50 kg),3066,4745,Tarde,Molino 1,4,3.5,14614.57,16,Completado,64.62,Pastelera
+LOTE2024-0143,2024-05-22,Harina panetonera especial (50 kg),2523,3627,Mañana,Molino 1,11,2.3,7505.66,176,Completado,69.56,Panetonera
+LOTE2024-0144,2024-05-23,Harina panadera premium (50 kg),2859,3384,Mañana,Molino 3,8,4.9,3794.76,127,Completado,84.49,Premium
+LOTE2024-0145,2024-05-24,Harina integral (25 kg),1507,4524,Tarde,Molino 1,11,5.8,4264.89,174,Rechazado,33.31,Integral
+LOTE2024-0146,2024-05-25,Harina panadera especial Doña Angélica (50 kg),2024,3973,Tarde,Molino 2,4,3.0,10623.44,176,Completado,50.94,Panadera
+LOTE2024-0147,2024-05-26,Harina integral (25 kg),593,623,Tarde,Molino 2,6,5.3,14666.23,119,Completado,95.18,Integral
+LOTE2024-0148,2024-05-27,Harina panetonera especial (50 kg),4027,3635,Tarde,Molino 3,3,2.0,2810.05,163,Completado,110.78,Panetonera
+LOTE2024-0149,2024-05-28,Harina panadera premium (50 kg),4056,2652,Noche,Molino 3,7,2.5,13365.45,100,En proceso,152.94,Premium
+LOTE2024-0150,2024-05-29,Harina panadera especial GN (50 kg),4996,4597,Mañana,Molino 3,7,4.4,8843.75,116,Completado,108.68,Panadera
+LOTE2024-0151,2024-05-30,Harina integral (25 kg),4511,4286,Tarde,Molino 3,11,8.7,4232.16,136,Completado,105.25,Integral
+LOTE2024-0152,2024-05-31,Harina panadera especial Don Angelo (50 kg),691,2363,Mañana,Molino 2,5,8.7,9445.81,163,Completado,29.24,Panadera
+LOTE2024-0153,2024-06-01,Harina panadera especial GN (50 kg),913,4091,Noche,Molino 2,7,7.0,11095.16,70,Completado,22.32,Panadera
+LOTE2024-0154,2024-06-02,Harina panadera especial Don Angelo (50 kg),1758,2382,Mañana,Molino 2,5,4.4,9953.19,193,Completado,73.8,Panadera
+LOTE2024-0155,2024-06-03,Harina panadera especial Don Angelo (50 kg),2051,4927,Tarde,Molino 1,4,5.9,14030.23,65,Completado,41.63,Panadera
+LOTE2024-0156,2024-06-04,Harina pastelera premium (50 kg),3831,3436,Tarde,Molino 1,10,9.4,10352.08,118,Completado,111.5,Pastelera
+LOTE2024-0157,2024-06-05,Harina panadera especial Doña Angélica (50 kg),2888,2993,Noche,Molino 1,5,2.6,7461.97,75,Completado,96.49,Panadera
+LOTE2024-0158,2024-06-06,Harina panadera especial Don Angelo (50 kg),1045,5247,Tarde,Molino 2,6,4.1,5826.68,139,Completado,19.92,Panadera
+LOTE2024-0159,2024-06-07,Harina panadera integral (25 kg),4315,3877,Tarde,Molino 3,3,2.4,7077.92,41,Completado,111.3,Integral
+LOTE2024-0160,2024-06-08,Harina panadera premium (50 kg),768,1410,Tarde,Molino 3,7,3.2,5362.04,131,En proceso,54.47,Premium
+LOTE2024-0161,2024-06-09,Harina pastelera premium (50 kg),1374,1170,Tarde,Molino 1,8,3.3,7574.15,163,En proceso,117.44,Pastelera
+LOTE2024-0162,2024-06-10,Harina integral (25 kg),1038,3208,Tarde,Molino 1,10,4.7,6643.53,182,Rechazado,32.36,Integral
+LOTE2024-0163,2024-06-11,Harina panadera especial Doña Angélica (50 kg),955,2822,Mañana,Molino 3,3,7.6,8321.82,123,Completado,33.84,Panadera
+LOTE2024-0164,2024-06-12,Harina panetonera especial (50 kg),1436,891,Noche,Molino 1,5,4.3,2837.05,166,Completado,161.17,Panetonera
+LOTE2024-0165,2024-06-13,Harina panadera especial Doña Angélica (50 kg),4381,977,Mañana,Molino 1,9,6.6,13637.41,4,Completado,448.41,Panadera
+LOTE2024-0166,2024-06-14,Harina panadera premium (50 kg),1424,2485,Tarde,Molino 2,11,7.3,12999.79,54,Completado,57.3,Premium
+LOTE2024-0167,2024-06-15,Harina pastelera premium (50 kg),2801,2499,Noche,Molino 1,10,6.6,9444.47,153,Completado,112.08,Pastelera
+LOTE2024-0168,2024-06-16,Harina pastelera premium (50 kg),4227,2680,Noche,Molino 2,8,2.2,13845.0,55,Completado,157.72,Pastelera
+LOTE2024-0169,2024-06-17,Harina panadera especial Doña Angélica (50 kg),1758,1219,Mañana,Molino 2,9,5.0,6674.69,184,En proceso,144.22,Panadera
+LOTE2024-0170,2024-06-18,Harina panadera especial Doña Angélica (50 kg),680,2006,Noche,Molino 1,10,2.9,12607.87,176,En proceso,33.9,Panadera
+LOTE2024-0171,2024-06-19,Harina panadera especial GN (50 kg),4061,942,Mañana,Molino 2,10,3.8,4399.73,141,Completado,431.1,Panadera
+LOTE2024-0172,2024-06-20,Harina panadera integral (25 kg),1213,1429,Tarde,Molino 2,5,7.3,14628.08,140,Completado,84.88,Integral
+LOTE2024-0173,2024-06-21,Harina galletera especial (50 kg),4604,2560,Mañana,Molino 2,4,6.8,7039.65,23,En proceso,179.84,Galletera
+LOTE2024-0174,2024-06-22,Harina panetonera especial (50 kg),2292,1060,Mañana,Molino 3,9,3.9,9660.71,81,En proceso,216.23,Panetonera
+LOTE2024-0175,2024-06-23,Harina panadera premium (50 kg),4884,2867,Mañana,Molino 1,3,4.2,4611.76,127,Completado,170.35,Premium
+LOTE2024-0176,2024-06-24,Harina panadera premium (50 kg),1618,3891,Tarde,Molino 3,8,3.5,9633.38,140,Completado,41.58,Premium
+LOTE2024-0177,2024-06-25,Harina panadera especial Doña Angélica (10 kg),1288,5482,Mañana,Molino 2,5,5.2,4867.42,174,Completado,23.5,Panadera
+LOTE2024-0178,2024-06-26,Harina panadera especial Doña Angélica (10 kg),2755,4214,Noche,Molino 2,9,3.2,13211.28,183,Completado,65.38,Panadera
+LOTE2024-0179,2024-06-27,Harina panadera especial GN (50 kg),560,2185,Mañana,Molino 3,4,8.8,13849.06,159,En proceso,25.63,Panadera
+LOTE2024-0180,2024-06-28,Harina galletera especial (50 kg),4366,3329,Noche,Molino 2,8,3.5,3897.38,39,Completado,131.15,Galletera
+LOTE2024-0181,2024-06-29,Harina panetonera especial (50 kg),2264,4542,Noche,Molino 2,5,3.1,8758.62,23,Completado,49.85,Panetonera
+LOTE2024-0182,2024-06-30,Harina pastelera premium (50 kg),4018,616,Tarde,Molino 1,8,3.9,11507.47,112,Rechazado,652.27,Pastelera
+LOTE2024-0183,2024-07-01,Harina panadera especial Don Angelo (50 kg),2995,1331,Mañana,Molino 2,9,4.9,6095.38,145,Completado,225.02,Panadera
+LOTE2024-0184,2024-07-02,Harina panadera especial GN (50 kg),2978,1939,Mañana,Molino 3,7,8.5,7372.47,13,Completado,153.58,Panadera
+LOTE2024-0185,2024-07-03,Harina integral (25 kg),3958,1386,Noche,Molino 1,4,9.3,3432.44,31,Rechazado,285.57,Integral
+LOTE2024-0186,2024-07-04,Harina panadera especial GN (50 kg),3856,3345,Noche,Molino 2,11,6.5,6327.32,89,Completado,115.28,Panadera
+LOTE2024-0187,2024-07-05,Harina pastelera premium (50 kg),2102,2862,Noche,Molino 1,10,8.4,8734.78,68,En proceso,73.45,Pastelera
+LOTE2024-0188,2024-07-06,Harina panadera especial Don Angelo (50 kg),4296,2175,Mañana,Molino 3,10,7.6,11742.82,193,Completado,197.52,Panadera
+LOTE2024-0189,2024-07-07,Harina panadera especial Doña Angélica (10 kg),916,4737,Tarde,Molino 2,3,2.4,4164.64,95,Completado,19.34,Panadera
+LOTE2024-0190,2024-07-08,Harina panadera especial Doña Angélica (50 kg),4954,2461,Mañana,Molino 2,4,7.9,12386.62,1,En proceso,201.3,Panadera
+LOTE2024-0191,2024-07-09,Harina galletera especial (50 kg),3356,4396,Noche,Molino 2,10,8.9,4855.01,62,Completado,76.34,Galletera
+LOTE2024-0192,2024-07-10,Harina panadera especial Doña Angélica (50 kg),1646,5029,Tarde,Molino 3,7,7.1,12014.54,187,Completado,32.73,Panadera
+LOTE2024-0193,2024-07-11,Harina panadera premium (50 kg),3033,744,Tarde,Molino 1,8,3.3,4263.2,104,En proceso,407.66,Premium
+LOTE2024-0194,2024-07-12,Harina panadera premium (50 kg),4810,2770,Mañana,Molino 3,5,9.9,11379.66,134,Completado,173.65,Premium
+LOTE2024-0195,2024-07-13,Harina panadera especial Don Angelo (50 kg),4777,3786,Mañana,Molino 2,4,8.5,13611.31,14,Completado,126.18,Panadera
+LOTE2024-0196,2024-07-14,Harina panadera especial GN (50 kg),2058,4694,Noche,Molino 3,3,5.4,4318.17,47,Completado,43.84,Panadera
+LOTE2024-0197,2024-07-15,Harina integral (25 kg),2740,1477,Tarde,Molino 2,10,8.3,10771.21,86,En proceso,185.51,Integral
+LOTE2024-0198,2024-07-16,Harina panadera premium (50 kg),2184,1530,Tarde,Molino 3,5,6.2,8887.61,90,Completado,142.75,Premium
+LOTE2024-0199,2024-07-17,Harina panadera especial GN (50 kg),1939,1305,Mañana,Molino 2,9,7.9,7155.02,76,Completado,148.58,Panadera
+LOTE2024-0200,2024-07-18,Harina pastelera premium (50 kg),2912,5241,Tarde,Molino 3,6,8.0,11168.59,91,Rechazado,55.56,Pastelera
+LOTE2024-0201,2024-07-19,Harina integral (25 kg),2580,3736,Mañana,Molino 3,11,8.0,11074.47,90,Completado,69.06,Integral
+LOTE2024-0202,2024-07-20,Harina panadera especial Don Angelo (50 kg),1604,3270,Tarde,Molino 1,6,2.2,6394.0,29,Completado,49.05,Panadera
+LOTE2024-0203,2024-07-21,Harina panetonera especial (50 kg),1081,2519,Mañana,Molino 3,11,2.1,6789.89,129,Completado,42.91,Panetonera
+LOTE2024-0204,2024-07-22,Harina panadera especial GN (50 kg),3489,1042,Noche,Molino 3,9,9.9,12004.66,93,Completado,334.84,Panadera
+LOTE2024-0205,2024-07-23,Harina galletera especial (50 kg),4602,3693,Noche,Molino 2,4,7.9,12280.91,194,Completado,124.61,Galletera
+LOTE2024-0206,2024-07-24,Harina pastelera premium (50 kg),2156,5121,Tarde,Molino 1,3,8.6,14911.18,54,Completado,42.1,Pastelera
+LOTE2024-0207,2024-07-25,Harina panadera especial Doña Angélica (50 kg),2540,3035,Mañana,Molino 3,8,3.0,14216.31,149,Rechazado,83.69,Panadera
+LOTE2024-0208,2024-07-26,Harina panadera especial Doña Angélica (50 kg),2661,699,Mañana,Molino 1,7,4.6,14133.27,92,Rechazado,380.69,Panadera
+LOTE2024-0209,2024-07-27,Harina panadera especial Doña Angélica (50 kg),3268,2403,Noche,Molino 2,5,9.9,14126.19,13,Completado,136.0,Panadera
+LOTE2024-0210,2024-07-28,Harina integral (25 kg),4443,3964,Mañana,Molino 1,8,2.3,12815.06,142,Completado,112.08,Integral
+LOTE2024-0211,2024-07-29,Harina panadera premium (50 kg),2289,5447,Tarde,Molino 2,5,7.6,10652.08,177,Completado,42.02,Premium
+LOTE2024-0212,2024-07-30,Harina panadera integral (25 kg),2914,1681,Noche,Molino 1,10,3.3,3709.17,13,Completado,173.35,Integral
+LOTE2024-0213,2024-07-31,Harina panadera especial Doña Angélica (50 kg),787,2710,Noche,Molino 2,6,5.0,5775.84,112,Completado,29.04,Panadera
+LOTE2024-0214,2024-08-01,Harina integral (25 kg),1938,1950,Noche,Molino 2,8,9.4,14045.61,161,Completado,99.38,Integral
+LOTE2024-0215,2024-08-02,Harina panadera premium (50 kg),1321,690,Tarde,Molino 1,8,5.9,14637.81,130,Completado,191.45,Premium
+LOTE2024-0216,2024-08-03,Harina panadera especial Don Angelo (50 kg),3848,4200,Mañana,Molino 1,9,8.0,11643.72,43,Completado,91.62,Panadera
+LOTE2024-0217,2024-08-04,Harina panadera integral (25 kg),534,2510,Mañana,Molino 2,5,2.6,2799.48,16,Completado,21.27,Integral
+LOTE2024-0218,2024-08-05,Harina panadera especial GN (50 kg),4618,2546,Tarde,Molino 2,11,5.0,13107.11,175,Completado,181.38,Panadera
+LOTE2024-0219,2024-08-06,Harina pastelera premium (50 kg),4253,1288,Mañana,Molino 2,9,2.1,4242.92,34,Completado,330.2,Pastelera
+LOTE2024-0220,2024-08-07,Harina panetonera especial (50 kg),2289,4788,Tarde,Molino 2,6,9.0,11648.8,160,Completado,47.81,Panetonera
+LOTE2024-0221,2024-08-08,Harina pastelera premium (50 kg),2897,3987,Noche,Molino 3,11,7.9,6156.22,100,Completado,72.66,Pastelera
+LOTE2024-0222,2024-08-09,Harina panadera especial Doña Angélica (10 kg),829,2162,Tarde,Molino 1,4,3.0,4149.94,61,En proceso,38.34,Panadera
+LOTE2024-0223,2024-08-10,Harina panadera premium (50 kg),3384,1192,Noche,Molino 2,10,5.5,4128.61,60,Completado,283.89,Premium
+LOTE2024-0224,2024-08-11,Harina panetonera especial (50 kg),1906,1236,Noche,Molino 3,8,3.0,3628.09,54,Completado,154.21,Panetonera
+LOTE2024-0225,2024-08-12,Harina panadera especial GN (50 kg),4208,1959,Mañana,Molino 2,3,6.6,14976.37,16,Completado,214.8,Panadera
+LOTE2024-0226,2024-08-13,Harina pastelera premium (50 kg),1262,2528,Mañana,Molino 2,5,9.2,8729.96,185,Completado,49.92,Pastelera
+LOTE2024-0227,2024-08-14,Harina panadera especial Don Angelo (50 kg),4241,4440,Mañana,Molino 3,3,9.7,7361.51,127,Completado,95.52,Panadera
+LOTE2024-0228,2024-08-15,Harina panadera especial Doña Angélica (10 kg),2234,4192,Mañana,Molino 2,7,5.8,4696.56,72,En proceso,53.29,Panadera
+LOTE2024-0229,2024-08-16,Harina panadera especial Doña Angélica (50 kg),889,1929,Mañana,Molino 3,7,8.6,7418.32,136,Completado,46.09,Panadera
+LOTE2024-0230,2024-08-17,Harina panadera especial Doña Angélica (50 kg),4391,4126,Mañana,Molino 3,10,8.1,13299.42,74,Completado,106.42,Panadera
+LOTE2024-0231,2024-08-18,Harina integral (25 kg),4813,1532,Mañana,Molino 2,9,2.1,4065.01,29,Completado,314.16,Integral
+LOTE2024-0232,2024-08-19,Harina panadera premium (50 kg),2373,1354,Noche,Molino 3,10,3.4,8548.16,17,Completado,175.26,Premium
+LOTE2024-0233,2024-08-20,Harina panetonera especial (50 kg),2007,1107,Noche,Molino 3,9,3.8,8967.46,175,Completado,181.3,Panetonera
+LOTE2024-0234,2024-08-21,Harina panadera especial GN (50 kg),3469,4829,Tarde,Molino 2,10,2.7,13039.58,110,Completado,71.84,Panadera
+LOTE2024-0235,2024-08-22,Harina panadera premium (50 kg),3927,2812,Mañana,Molino 2,11,4.3,5324.79,100,Rechazado,139.65,Premium
+LOTE2024-0236,2024-08-23,Harina panadera premium (50 kg),4124,1749,Tarde,Molino 2,5,4.7,5534.93,141,En proceso,235.79,Premium
+LOTE2024-0237,2024-08-24,Harina panadera premium (50 kg),3241,3454,Mañana,Molino 3,7,5.4,7412.18,192,Completado,93.83,Premium
+LOTE2024-0238,2024-08-25,Harina panadera especial GN (50 kg),4399,2044,Mañana,Molino 1,6,9.3,2127.57,7,Completado,215.22,Panadera
+LOTE2024-0239,2024-08-26,Harina galletera especial (50 kg),1362,4191,Noche,Molino 3,7,6.1,3214.53,138,Completado,32.5,Galletera
+LOTE2024-0240,2024-08-27,Harina galletera especial (50 kg),4809,1134,Noche,Molino 3,7,3.1,11051.58,174,Completado,424.07,Galletera
+LOTE2024-0241,2024-08-28,Harina panetonera especial (50 kg),1203,1867,Tarde,Molino 3,9,5.9,9382.88,91,En proceso,64.43,Panetonera
+LOTE2024-0242,2024-08-29,Harina integral (25 kg),1994,2462,Noche,Molino 3,8,6.1,2877.75,32,Completado,80.99,Integral
+LOTE2024-0243,2024-08-30,Harina galletera especial (50 kg),2669,4044,Tarde,Molino 2,9,4.5,7577.7,164,Completado,66.0,Galletera
+LOTE2024-0244,2024-08-31,Harina panadera especial Doña Angélica (10 kg),4834,1814,Mañana,Molino 3,8,6.8,7475.76,73,Completado,266.48,Panadera
+LOTE2024-0245,2024-09-01,Harina panadera especial GN (50 kg),4974,2201,Mañana,Molino 3,4,4.5,14066.52,118,Completado,225.99,Panadera
+LOTE2024-0246,2024-09-02,Harina panadera especial Doña Angélica (10 kg),3293,2941,Mañana,Molino 1,11,4.3,10338.6,178,Completado,111.97,Panadera
+LOTE2024-0247,2024-09-03,Harina panadera especial GN (50 kg),1122,5355,Noche,Molino 3,5,9.0,11476.84,67,Completado,20.95,Panadera
+LOTE2024-0248,2024-09-04,Harina galletera especial (50 kg),3212,2550,Noche,Molino 3,8,5.3,5956.74,148,En proceso,125.96,Galletera
+LOTE2024-0249,2024-09-05,Harina panadera premium (50 kg),4039,4341,Noche,Molino 2,5,6.1,4984.41,79,En proceso,93.04,Premium
+LOTE2024-0250,2024-09-06,Harina integral (25 kg),2492,4400,Noche,Molino 1,9,6.9,14623.99,48,Completado,56.64,Integral
+LOTE2024-0251,2024-09-07,Harina panadera especial Don Angelo (50 kg),3013,4705,Noche,Molino 1,4,6.9,5903.15,136,Completado,64.04,Panadera
+LOTE2024-0252,2024-09-08,Harina panadera especial Don Angelo (50 kg),2361,1299,Tarde,Molino 3,3,6.9,14754.49,168,Completado,181.76,Panadera
+LOTE2024-0253,2024-09-09,Harina panadera premium (50 kg),2527,4576,Mañana,Molino 1,8,8.1,3775.33,40,Completado,55.22,Premium
+LOTE2024-0254,2024-09-10,Harina panadera premium (50 kg),1177,4546,Noche,Molino 1,5,4.3,12153.09,65,Completado,25.89,Premium
+LOTE2024-0255,2024-09-11,Harina panadera especial Doña Angélica (50 kg),582,2551,Tarde,Molino 1,5,8.4,9774.59,30,En proceso,22.81,Panadera
+LOTE2024-0256,2024-09-12,Harina panadera integral (25 kg),2841,1711,Mañana,Molino 3,7,6.3,13554.26,175,Completado,166.04,Integral
+LOTE2024-0257,2024-09-13,Harina integral (25 kg),3855,3047,Mañana,Molino 1,7,9.1,6006.38,190,En proceso,126.52,Integral
+LOTE2024-0258,2024-09-14,Harina panetonera especial (50 kg),2466,709,Noche,Molino 1,10,9.5,3597.7,53,Completado,347.81,Panetonera
+LOTE2024-0259,2024-09-15,Harina panadera especial Doña Angélica (10 kg),2802,3066,Mañana,Molino 1,9,2.5,14728.08,177,Completado,91.39,Panadera
+LOTE2024-0260,2024-09-16,Harina integral (25 kg),1867,3916,Noche,Molino 2,10,5.4,7282.76,100,Completado,47.68,Integral
+LOTE2024-0261,2024-09-17,Harina panadera integral (25 kg),4045,1542,Mañana,Molino 2,6,9.0,8066.67,126,Rechazado,262.32,Integral
+LOTE2024-0262,2024-09-18,Harina panadera especial GN (50 kg),4539,2117,Mañana,Molino 3,7,5.7,8807.44,76,En proceso,214.41,Panadera
+LOTE2024-0263,2024-09-19,Harina pastelera premium (50 kg),3704,4328,Tarde,Molino 2,3,9.3,8877.31,152,Completado,85.58,Pastelera
+LOTE2024-0264,2024-09-20,Harina galletera especial (50 kg),1408,4891,Tarde,Molino 3,9,2.1,7512.01,193,Completado,28.79,Galletera
+LOTE2024-0265,2024-09-21,Harina panadera especial Doña Angélica (50 kg),841,2282,Tarde,Molino 2,10,6.4,13969.43,97,En proceso,36.85,Panadera
+LOTE2024-0266,2024-09-22,Harina integral (25 kg),1045,4909,Noche,Molino 3,6,4.3,3938.44,94,Completado,21.29,Integral
+LOTE2024-0267,2024-09-23,Harina panadera especial Doña Angélica (50 kg),732,1116,Noche,Molino 1,11,3.8,10420.02,39,Completado,65.59,Panadera
+LOTE2024-0268,2024-09-24,Harina panadera premium (50 kg),4936,2824,Tarde,Molino 1,11,5.5,8071.63,41,En proceso,174.79,Premium
+LOTE2024-0269,2024-09-25,Harina panadera premium (50 kg),3813,5206,Tarde,Molino 1,6,10.0,11861.03,180,Completado,73.24,Premium
+LOTE2024-0270,2024-09-26,Harina panadera premium (50 kg),4250,3127,Noche,Molino 2,3,4.1,12545.29,44,Rechazado,135.91,Premium
+LOTE2024-0271,2024-09-27,Harina panadera especial GN (50 kg),3366,2387,Noche,Molino 1,6,8.9,6211.03,91,Completado,141.01,Panadera
+LOTE2024-0272,2024-09-28,Harina panadera especial Doña Angélica (50 kg),2336,3544,Mañana,Molino 1,5,3.8,11984.0,62,En proceso,65.91,Panadera
+LOTE2024-0273,2024-09-29,Harina panadera integral (25 kg),2186,5163,Noche,Molino 3,11,7.9,6463.22,92,Rechazado,42.34,Integral
+LOTE2024-0274,2024-09-30,Harina panadera especial Doña Angélica (50 kg),2980,3536,Noche,Molino 1,3,4.5,6665.96,126,En proceso,84.28,Panadera
+LOTE2024-0275,2024-10-01,Harina panadera especial GN (50 kg),4207,3021,Mañana,Molino 1,8,2.4,14320.01,157,En proceso,139.26,Panadera
+LOTE2024-0276,2024-10-02,Harina integral (25 kg),1190,5180,Mañana,Molino 2,9,9.1,4080.85,122,Completado,22.97,Integral
+LOTE2024-0277,2024-10-03,Harina panadera especial GN (50 kg),1373,1107,Noche,Molino 2,4,6.2,12459.15,160,En proceso,124.03,Panadera
+LOTE2024-0278,2024-10-04,Harina pastelera premium (50 kg),2478,2665,Tarde,Molino 2,10,9.6,14000.03,60,Completado,92.98,Pastelera
+LOTE2024-0279,2024-10-05,Harina integral (25 kg),1369,4300,Tarde,Molino 1,4,7.7,2918.13,72,Completado,31.84,Integral
+LOTE2024-0280,2024-10-06,Harina panadera especial Doña Angélica (50 kg),3257,900,Tarde,Molino 3,6,3.7,12584.07,173,Completado,361.89,Panadera
+LOTE2024-0281,2024-10-07,Harina pastelera premium (50 kg),2768,4234,Tarde,Molino 2,5,7.3,8409.57,188,Completado,65.38,Pastelera
+LOTE2024-0282,2024-10-08,Harina integral (25 kg),996,4086,Tarde,Molino 3,11,7.9,2827.99,181,Completado,24.38,Integral

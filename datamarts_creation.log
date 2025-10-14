@@ -1,0 +1,41 @@
+2025-10-14 01:17:15,423 - INFO - 🚀 Iniciando creación de datamarts separados...
+2025-10-14 01:17:15,427 - INFO - ✅ Conectado a BD origen: empresa_molinera.db
+2025-10-14 01:17:15,428 - INFO - 🗑️  Eliminado archivo previo: datamart_ventas.db
+2025-10-14 01:17:15,429 - INFO - ✅ Creado datamart ventas: datamart_ventas.db
+2025-10-14 01:17:15,430 - INFO - 🗑️  Eliminado archivo previo: datamart_inventarios.db
+2025-10-14 01:17:15,431 - INFO - ✅ Creado datamart inventarios: datamart_inventarios.db
+2025-10-14 01:17:15,432 - INFO - 🗑️  Eliminado archivo previo: datamart_distribucion.db
+2025-10-14 01:17:15,433 - INFO - ✅ Creado datamart distribucion: datamart_distribucion.db
+2025-10-14 01:17:15,434 - INFO - 🗑️  Eliminado archivo previo: datamart_produccion.db
+2025-10-14 01:17:15,435 - INFO - ✅ Creado datamart produccion: datamart_produccion.db
+2025-10-14 01:17:15,436 - INFO - 🕒 Creando dimensión TIEMPO en todos los datamarts...
+2025-10-14 01:17:15,438 - INFO - 📅 Tabla DIM_TIEMPO creada en ventas
+2025-10-14 01:17:15,440 - INFO - 📅 Tabla DIM_TIEMPO creada en inventarios
+2025-10-14 01:17:15,442 - INFO - 📅 Tabla DIM_TIEMPO creada en distribucion
+2025-10-14 01:17:15,444 - INFO - 📅 Tabla DIM_TIEMPO creada en produccion
+2025-10-14 01:17:15,463 - INFO - 📊 Dimensión TIEMPO poblada en ventas con 1461 registros
+2025-10-14 01:17:15,472 - INFO - 📊 Dimensión TIEMPO poblada en inventarios con 1461 registros
+2025-10-14 01:17:15,480 - INFO - 📊 Dimensión TIEMPO poblada en distribucion con 1461 registros
+2025-10-14 01:17:15,492 - INFO - 📊 Dimensión TIEMPO poblada en produccion con 1461 registros
+2025-10-14 01:17:15,493 - INFO - 🛒 Creando Datamart de VENTAS...
+2025-10-14 01:17:15,494 - INFO - 📋 Creando dimensiones para Ventas...
+2025-10-14 01:17:15,505 - INFO - 📊 Poblando dimensiones de Ventas...
+2025-10-14 01:17:15,530 - INFO - ✅ Dimensiones de Ventas pobladas exitosamente
+2025-10-14 01:17:15,530 - INFO - 🎯 Poblando tabla de hechos VENTAS...
+2025-10-14 01:17:18,999 - INFO - ✅ Tabla de hechos VENTAS poblada con 2823 registros
+2025-10-14 01:17:19,003 - INFO - ✅ Datamart de VENTAS creado exitosamente
+2025-10-14 01:17:19,004 - INFO - 📦 Creando Datamart de INVENTARIOS...
+2025-10-14 01:17:23,599 - INFO - ✅ Tabla de hechos INVENTARIO poblada con 3660 registros
+2025-10-14 01:17:23,600 - INFO - ✅ Datamart de INVENTARIOS creado exitosamente
+2025-10-14 01:17:23,601 - INFO - 🚚 Creando Datamart de DISTRIBUCIÓN...
+2025-10-14 01:17:28,048 - INFO - ✅ Tabla de hechos DISTRIBUCIÓN poblada con 2823 registros
+2025-10-14 01:17:28,050 - INFO - ✅ Datamart de DISTRIBUCIÓN creado exitosamente
+2025-10-14 01:17:28,051 - INFO - 🏭 Creando Datamart de PRODUCCIÓN...
+2025-10-14 01:17:28,278 - INFO - ✅ Tabla de hechos PRODUCCIÓN poblada con 282 registros
+2025-10-14 01:17:28,280 - INFO - ✅ Datamart de PRODUCCIÓN creado exitosamente
+2025-10-14 01:17:28,281 - INFO - 🎉 ¡Todos los datamarts creados exitosamente!
+2025-10-14 01:17:28,283 - INFO - 🔒 Conexión cerrada para datamart ventas
+2025-10-14 01:17:28,284 - INFO - 🔒 Conexión cerrada para datamart inventarios
+2025-10-14 01:17:28,286 - INFO - 🔒 Conexión cerrada para datamart distribucion
+2025-10-14 01:17:28,287 - INFO - 🔒 Conexión cerrada para datamart produccion
+2025-10-14 01:17:28,287 - INFO - 🔒 Todas las conexiones cerradas

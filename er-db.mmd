@@ -1,0 +1,180 @@
+---
+title: Base de Datos Empresa Molinera - Estructura para SQLite
+---
+erDiagram
+    %% Entidades de Catálogos/Maestros
+    PRODUCTOS {
+        int id_producto PK
+        string codigo_producto UK "Código único del producto"
+        string nombre_producto
+        string descripcion
+        string tipo_harina
+        decimal peso_kg
+        string unidad_empaque
+        decimal precio_base
+        datetime fecha_creacion
+        boolean activo
+    }
+
+    PAISES {
+        int id_pais PK
+        string codigo_pais UK "Código ISO del país"
+        string nombre_pais
+        string region
+        decimal tipo_cambio_usd
+        boolean activo
+    }
+
+    ALMACENES {
+        int id_almacen PK
+        string codigo_almacen UK
+        string nombre_almacen
+        int id_pais FK
+        string direccion
+        decimal capacidad_maxima_ton
+        boolean activo
+    }
+
+    CLIENTES {
+        int id_cliente PK
+        string codigo_cliente UK
+        string nombre_cliente
+        string tipo_cliente "Nacional/Exportación"
+        int id_pais FK
+        string direccion
+        string contacto
+        string telefono
+        string email
+        boolean activo
+    }
+
+    CANALES_DISTRIBUCION {
+        int id_canal PK
+        string codigo_canal
+        string nombre_canal
+        string descripcion
+        boolean activo
+    }
+
+    MEDIOS_TRANSPORTE {
+        int id_medio_transporte PK
+        string codigo_transporte
+        string tipo_transporte "Terrestre/Marítimo/Aéreo"
+        decimal costo_base_km
+        boolean activo
+    }
+
+    INCOTERMS {
+        int id_incoterm PK
+        string codigo_incoterm UK "FOB/CIF/DAP/etc"
+        string descripcion
+        string responsabilidades
+        boolean activo
+    }
+
+    %% Entidades Operativas
+    INVENTARIOS {
+        int id_inventario PK
+        date fecha_registro
+        int id_producto FK
+        int id_almacen FK
+        decimal stock_inicial_ton
+        decimal entradas_ton
+        decimal salidas_ton
+        decimal stock_final_ton
+        decimal stock_minimo_ton
+        decimal stock_maximo_ton
+        decimal costo_unitario
+        decimal valor_total
+        string estado_stock "Óptimo/Bajo/Crítico/Exceso"
+        datetime fecha_actualizacion
+    }
+
+    PRODUCCION {
+        int id_produccion PK
+        date fecha_produccion
+        int id_producto FK
+        int id_almacen FK
+        decimal cantidad_producida_ton
+        decimal horas_produccion
+        decimal costo_materia_prima
+        decimal costo_mano_obra
+        decimal costo_indirecto
+        decimal costo_total
+        string turno "Mañana/Tarde/Noche"
+        string estado_lote "Aprobado/Rechazado/En_Proceso"
+        string numero_lote UK
+        datetime fecha_vencimiento
+    }
+
+    VENTAS {
+        int id_venta PK
+        string nro_pedido UK
+        date fecha_venta
+        int id_producto FK
+        int id_cliente FK
+        int id_incoterm FK
+        int id_medio_transporte FK
+        decimal precio_unitario
+        decimal cantidad_toneladas
+        decimal total_venta
+        string moneda "PEN/USD"
+        decimal tipo_cambio
+        string estado_venta "Pendiente/Confirmado/Enviado/Entregado/Cancelado"
+        datetime fecha_creacion
+        datetime fecha_actualizacion
+    }
+
+    DISTRIBUCION {
+        int id_distribucion PK
+        date fecha_distribucion
+        int id_venta FK
+        int id_almacen_origen FK
+        int id_almacen_destino FK
+        int id_canal FK
+        int id_medio_transporte FK
+        decimal cantidad_distribuida_ton
+        decimal costo_transporte
+        decimal tiempo_entrega_dias
+        string estado_distribucion "Programado/En_Transito/Entregado/Incidencia"
+        string numero_guia
+        datetime fecha_salida
+        datetime fecha_llegada_estimada
+        datetime fecha_llegada_real
+    }
+
+    PRECIOS_PRODUCTO {
+        int id_precio PK
+        int id_producto FK
+        int id_pais FK
+        decimal precio_venta
+        string moneda
+        date fecha_vigencia_inicio
+        date fecha_vigencia_fin
+        string tipo_cliente "Nacional/Exportación"
+        boolean activo
+    }
+
+    %% Relaciones
+    PAISES ||--o{ ALMACENES : "ubicado_en"
+    PAISES ||--o{ CLIENTES : "pertenece_a"
+
+    ALMACENES ||--o{ INVENTARIOS : "almacena"
+    PRODUCTOS ||--o{ INVENTARIOS : "registra_stock"
+
+    ALMACENES ||--o{ PRODUCCION : "produce_en"
+    PRODUCTOS ||--o{ PRODUCCION : "se_produce"
+
+    PRODUCTOS ||--o{ VENTAS : "se_vende"
+    CLIENTES ||--o{ VENTAS : "compra"
+    INCOTERMS ||--o{ VENTAS : "aplica_terminos"
+    MEDIOS_TRANSPORTE ||--o{ VENTAS : "utiliza_transporte"
+
+    VENTAS ||--o{ DISTRIBUCION : "genera_distribucion"
+    ALMACENES ||--o{ DISTRIBUCION : "origen"
+    ALMACENES ||--o{ DISTRIBUCION : "destino"
+    CANALES_DISTRIBUCION ||--o{ DISTRIBUCION : "utiliza_canal"
+    MEDIOS_TRANSPORTE ||--o{ DISTRIBUCION : "utiliza_medio"
+
+    PRODUCTOS ||--o{ PRECIOS_PRODUCTO : "tiene_precio"
+    PAISES ||--o{ PRECIOS_PRODUCTO : "precio_por_pais"
